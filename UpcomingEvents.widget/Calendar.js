@@ -1,7 +1,5 @@
-  /*
-    Get the private XML URL from your Google Calendar details page and paste it below, replacing 'INSERTPRIVATEXML' in the command below
-  */
-  command: 'curl -s "INSERTPRIVATEXML?&orderby=starttime&sortorder=ascending&singleevents=true&&max-results=5&futureevents=true"',
+
+  command: 'curl -s "https://www.google.com/calendar/feeds/kilens%40stolaf.edu/private-965736e3126313c15e24322565591652/basic?&orderby=starttime&sortorder=ascending&singleevents=true&max-results=5&futureevents=true"',
   refreshFrequency: 60000,
 
 
@@ -13,6 +11,7 @@
   update: function(output, domEl) {
 
     function splitSummary(str) {
+    	
     	
         var whenPos = str.indexOf("When");
         var nbspPos = str.indexOf("&nbsp");
@@ -83,6 +82,9 @@
     theLocation5 = whenWhere[0];
     theTime5 = whenWhere[1];
 
+
+
+
     title = "Upcoming Events";
 
     //Output
@@ -103,4 +105,4 @@
     dom.find(location5).html(theLocation5);
     dom.find(time5).html(theTime5);
   },
-  style: "top: 20px\nleft: 20px\nwidth:400px\nmargin:0px\npadding:0px\nbackground:rgba(#FFF, 0.5)\nborder:2px solid rgba(#000, 0.5)\nborder-radius:10px\noverflow:hidden\n#date\n  margin:12pt\n  margin-bottom:12pt\n  font-family: Helvetica\n  font-size: 25pt\n  font-weight:bold\n  color: rgba(black, 0.75)\n\n#title\n  margin-left:50pt\n  margin-right:12pt\n  font-family: American Typewriter\n  font-size: 20pt\n  font-weight:bold\n#description\n  margin-left:12pt\n  margin-right:12pt\n  font-family: American Typewriter\n  font-size: 12pt\n  line-height:18pt\n  max-height:10pt\n  overflow:hidden\n  hyphens: auto\n\n#footer\n  font-family: Helvetica\n  font-size: 9pt\n  margin:12pt\n  color: rgba(#000, 0.5)\n\np\n  margin: 0 0 0 20px\n\n.e\n  height: 60pt\n\n.event\n  font-size: 17pt\n  font-weight: bold\n\"
+  style: "top: 20px\nleft: 20px\nwidth:400px\nmargin:0px\npadding:0px\nbackground:rgba(#FFF, 0.5)\nborder:2px solid rgba(#000, 0.5)\nborder-radius:10px\noverflow:hidden\n#date\n  margin:12pt\n  margin-bottom:12pt\n  font-family: Helvetica\n  font-size: 25pt\n  font-weight:bold\n  color: rgba(black, 0.75)\n\n#title\n  margin-left:50pt\n  margin-right:12pt\n  font-family: American Typewriter\n  font-size: 20pt\n  font-weight:bold\n#description\n  margin-left:12pt\n  margin-right:12pt\n  font-family: American Typewriter\n  font-size: 12pt\n  line-height:18pt\n  max-height:10pt\n  overflow:hidden\n  hyphens: auto\n\n#footer\n  font-family: Helvetica\n  font-size: 9pt\n  margin:12pt\n  color: rgba(#000, 0.5)\n\np\n  margin: 0 0 0 20px\n\n.e\n  height: 60pt\n\n.event\n  font-size: 17pt\n  font-weight: bold\n"
