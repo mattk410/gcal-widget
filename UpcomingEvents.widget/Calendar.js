@@ -1,7 +1,7 @@
   /*
     Get the private XML URL from your Google Calendar details page and paste it below, replacing 'INSERTPRIVATEXML' in the command below
   */
-  command: 'curl -s "INSERTPRIVATEXML?&orderby=starttime&sortorder=ascending&singleevents=true&&max-results=5&futureevents=true"',
+  command: 'curl -s "INSERTPRIVATEXML?&orderby=starttime&sortorder=ascending&singleevents=true&max-results=5&futureevents=true"',
   refreshFrequency: 60000,
 
 
