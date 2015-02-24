@@ -1,5 +1,7 @@
-
-  command: 'curl -s "https://www.google.com/calendar/feeds/kilens%40stolaf.edu/private-965736e3126313c15e24322565591652/basic?&orderby=starttime&sortorder=ascending&singleevents=true&max-results=5&futureevents=true"',
+  /*
+    Get the private XML URL from your Google Calendar details page and paste it below, replacing 'INSERTPRIVATEXML' in the command below
+  */
+  command: 'curl -s "INSERTPRIVATEXML?&orderby=starttime&sortorder=ascending&singleevents=true&&max-results=5&futureevents=true"',
   refreshFrequency: 60000,
 
 
